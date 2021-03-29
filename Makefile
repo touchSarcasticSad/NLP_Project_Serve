@@ -1,4 +1,4 @@
 build:
 	mkdir -p deploy
-	go get gopkg.in/labstack/echo.v4
+	glide get github.com/labstack/echo
 	go run main.go
