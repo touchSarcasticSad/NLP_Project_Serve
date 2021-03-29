@@ -10,7 +10,7 @@ var model = null;
 
 async function loadModel(){
   /* Pretrained in python tensorflow */
-  model = await tf.loadLayersModel('/assets/model.json');
+  model = await tf.loadLayersModel('/static/assets/model.json');
   console.log("loadedModel");
 }
 
@@ -60,7 +60,7 @@ function readTextFile(file, callback) {
 
 $(document).ready(function(){
     loadModel();
-    readTextFile("/assets/word_dict.json", function(text){
+    readTextFile("/static/assets/word_dict.json", function(text){
       word2index = JSON.parse(text);
       console.log(word2index["the"])
     });
